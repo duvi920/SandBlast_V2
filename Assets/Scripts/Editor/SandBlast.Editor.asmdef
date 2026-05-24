@@ -1,0 +1,23 @@
+{
+    "name": "SandBlast.Editor",
+    "rootNamespace": "SandBlast.Editor",
+    "references": [
+        "SandBlast.Runtime",
+        "Unity.Entities",
+        "Unity.Entities.Hybrid",
+        "Unity.NetCode",
+        "Unity.Collections",
+        "Unity.Mathematics"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
