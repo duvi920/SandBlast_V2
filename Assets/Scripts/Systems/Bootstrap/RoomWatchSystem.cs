@@ -1,9 +1,10 @@
 using Unity.Entities;
 using Unity.NetCode;
 
-// 서버 전용 — 매 프레임 InGame 접속자 수를 감시한다.
-// 1 → 2 전환: RoomResetRequestTag 생성 + Phase = Countdown
-// 2 → 1 전환 (Countdown 중 나감): 카운트다운 취소 → Phase = Solo
+// [비활성화] 호스트 멀티 전환으로 LobbySystem이 이 시스템을 대체한다.
+// LobbySystem은 MinPlayers~MaxPlayers 범위의 인원을 지원하며,
+// RoomStateSingleton.MinPlayers / MaxPlayers 필드를 통해 Inspector에서 조절 가능하다.
+[DisableAutoCreation]
 [UpdateInGroup(typeof(SimulationSystemGroup))]
 [WorldSystemFilter(WorldSystemFilterFlags.ServerSimulation)]
 public partial class RoomWatchSystem : SystemBase
